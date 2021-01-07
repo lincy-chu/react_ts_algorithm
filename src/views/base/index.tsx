@@ -133,52 +133,52 @@ const Base = () => {
 
     }, []);
     const val1 = `
-        public traverse(arr: number[]) {
-            for (let i in arr) {
-                // 迭代访问arr[i]
-            }
+    public traverse(arr: number[]) {
+        for (let i in arr) {
+            // 迭代访问arr[i]
         }
+    }   
     `;
     const val2 = `
-        /* 基本的单链表节点 */
-        class ListNode<T> {
-            public val: T;
-            public ListNode: ListNode;
-        }
+    /* 基本的单链表节点 */
+    class ListNode<T> {
+        public val: T;
+        public ListNode: ListNode;
+    }    
         
-        public traverse(head: ListNode) {
+    public traverse(head: ListNode) {
             let p = head;
-            while(p.next) {
-                p = p.next;
-            }
+        while(p.next) {
+            p = p.next;
         }
+    }
     `;
     const val3 = `
-        /* 基本的二叉树节点 */
-        class TreeNode<T> {
-            public val: T;
-            public left: TreeNode;
-            public right: TreeNode;
-        }
+    /* 基本的二叉树节点 */
+    class TreeNode<T> {
+        public val: T;
+        public left: TreeNode;
+        public right: TreeNode;
+    }
         
-        public traverse(root: TreeNode): void {
-            traverse(root.left);
-            traverse(root.right);
-        }
+    public traverse(root: TreeNode): void {
+        traverse(root.left);
+        traverse(root.right);
+    }
     `;
     const val4 = `
-        const result = [];
-        const backTrack = (路径，选择列表) => {
-            if(满足结束条件) {
-                result.add(路径);
-                return;
-            }
-            for (let i in 路径) {
-                做选择
-                backTrack(路径，选择列表);
-                撤销选择
-            }
-        };
+    const result = [];
+    const backTrack = (路径，选择列表) => {
+        if(满足结束条件) {
+            result.add(路径);
+            return;
+        }
+        for (let i in 路径) {
+            做选择
+            backTrack(路径，选择列表);
+            撤销选择
+        }
+    };
     `;
     return (
         <div>
