@@ -1,0 +1,16 @@
+.App {
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  .link{
+    display: inline-block;
+    margin-right: 20px;
+    color: #38f;
+    text-decoration: none;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
