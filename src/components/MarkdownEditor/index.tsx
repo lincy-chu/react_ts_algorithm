@@ -11,7 +11,7 @@ const Code = (props: any) => {
     }, [s]);
     const style = {
         height: 'auto',
-        marginBottom: '10px',
+        marginBottom: '0px',
     };
     return (
         <Editor value={val} preview style={style} toolbar={toolbar} />

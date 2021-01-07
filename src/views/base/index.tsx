@@ -61,7 +61,7 @@ const Base = () => {
                         if (n < 0) return -1;
                         // 求最小值，所以初始化为正无穷
                         let res = Infinity;
-                        for(let i = 0; i < coins.length; i++) {
+                        for(let i in coins) {
                             const sub = dp(n - coins[i]);
                             if (Object.is(sub, -1)) continue;
                             res = Math.min(res, 1 + sub);
@@ -94,7 +94,7 @@ const Base = () => {
                         }
 
                         let res = Infinity;
-                        for (let i = 0; i < coins.length; i++) {
+                        for (let i in coins) {
                             const sub = dp(n - coins[i]);
                             if (Object.is(sub, -1)) continue;
                             res = Math.min(res, 1 + sub);
@@ -118,7 +118,7 @@ const Base = () => {
                     dp[0] = 0;
                     for (let i = 0; i < dp.length; i++) {
                         //  内层for在求所有子问题+1的最小值
-                        for (let j = 0; j < coins.length; j++) {
+                        for (let j in coins) {
                             // 子问题无解，跳过
                             if (i - coins[j] < 0) continue;
                             dp[i] = Math.min(dp[i], 1 + dp[i - coins[j]]);
@@ -134,7 +134,7 @@ const Base = () => {
     }, []);
     const val1 = `
         public traverse(arr: number[]) {
-            for (let i = 0; i < arr.length; i++) {
+            for (let i in arr) {
                 // 迭代访问arr[i]
             }
         }
@@ -173,7 +173,7 @@ const Base = () => {
                 result.add(路径);
                 return;
             }
-            for (let i = 0; i < 选择列表的长度; i++) {
+            for (let i in 路径) {
                 做选择
                 backTrack(路径，选择列表);
                 撤销选择
